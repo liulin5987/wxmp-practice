@@ -1,0 +1,4 @@
+<!--components/backtop/backtop.wxml-->
+<view class="backtop" bindtap="backtop">
+  <image class="toparrow" src="../../assets/img/common/top.png"></image>
+</view>

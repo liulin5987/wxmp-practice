@@ -1,0 +1,14 @@
+<!--components/goods/goodsitem/goodsitem.wxml-->
+<view class="goodsitem" bindtap="itemclick">
+  <block>
+    <image class="goodsimg" src="{{goodsitem.show.img}}"></image>
+  </block>
+  <view class="goodstitle">
+    <text>{{goodsitem.title}}</text>
+  </view>
+  <view class="goodstext">
+    <text>{{goodsitem.price}}</text>
+    <image class="star" src="../../../assets/img/home/star.png"></image>
+    <text>{{goodsitem.cfav}}</text>
+  </view>  
+</view>

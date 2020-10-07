@@ -1,0 +1,42 @@
+<!--pages/detail/detail.wxml-->
+
+<swiper class="swiper" autoplay="true" indicator-dots="true" circular="true">
+  <swiper-item wx:for="{{topimg}}" wx:key="index">
+    <image src="{{item}}" class="topimg" mode="widthFix"></image>
+  </swiper-item>
+</swiper>
+<view class="goodstitle">
+  <view class="title">{{goodstitle.title}}</view>
+  <view class="price">
+    <text class="nowprice">￥{{goodstitle.price}}</text>
+    <text class="oldprice">{{goodstitle.oldPrice}}</text>
+    <text class="discount">{{goodstitle.discountDesc}}</text>
+  </view>
+  <view class="columns">
+    <text class="columnsitem" wx:for="{{goodstitle.columns}}" wx:key="index">{{item}}</text>
+  </view>
+</view>
+<view class="shopinfo">
+  <view class="shophead">
+    <image class="logo" src="{{shopInfo.logo}}"></image>
+    <text class="shopname">{{shopInfo.name}}</text>
+  </view>
+  <view class="shopbody">
+    <view class="left">
+      <view class="leftitem">
+        <view>{{shopsells}}</view>
+        <text>总销量</text>
+      </view>
+      <view class="leftitem">
+        <view>{{shopInfo.goods}}</view>
+        <text>全部宝贝</text>
+      </view>  
+    </view>
+    <view class="right">
+      <view class="score" wx:for="{{shopInfo.score}}" wx:key="index">
+        <text>{{item.name}}:</text>
+        <text style="color:{{item.isBetter == true? 'red' : 'green'}}">{{item.score}}</text>
+      </view>
+    </view>
+  </view>
+</view> 

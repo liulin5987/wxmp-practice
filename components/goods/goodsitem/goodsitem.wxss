@@ -1,0 +1,21 @@
+/* components/goods/goodsitem/goodsitem.wxss */
+.goodsitem {
+  width: 100%;
+}
+.goodsimg {
+  border-radius: 16rpx;
+  width: 100%;
+}
+.goodstitle {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.goodstext {
+  text-align: center;
+}
+.star {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 6rpx;
+}

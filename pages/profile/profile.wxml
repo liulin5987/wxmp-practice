@@ -1,0 +1,62 @@
+<!--pages/profile/profile.wxml-->
+<view class="profile">
+  <view class="head">
+    <image class="avatar" src="../../assets/img/profile/avatar.svg"></image>
+    <view class="htext">
+      <view class="toptext">登陆/注册</view>
+      <view class="btext">
+        <image class="cellphone" src="../../assets/img/profile/phone.svg"></image>
+        <text>暂未绑定手机号</text>
+      </view>
+    </view>
+    <view class="arrow">></view>
+  </view>
+  <view class="wallet">
+    <view class="witem">
+      <view class="wdata">
+        <text class="detail">0.00</text>
+        <text>元</text>
+      </view>
+      <view class="info">我的余额</view>
+    </view>
+    <view class="witem">
+      <view class="wdata">
+        <text class="detail">0.00</text>
+        <text>元</text>
+      </view>
+      <view class="info">我的余额</view>
+    </view>
+    <view class="witem">
+      <view class="wdata">
+        <text class="detail">0.00</text>
+        <text>元</text>
+      </view>
+      <view class="info">我的余额</view>
+    </view>
+  </view>
+  <view class="middlebar">
+    <view class="infobar">
+      <image class="infoicon" src="../../assets/img/profile/message.svg"></image>
+      <text class="infotext">我的消息</text>
+    </view>
+    <view class="infobar">
+      <image class="infoicon" src="../../assets/img/profile/pointer.svg"></image>
+      <text class="infotext">积分商城</text>
+    </view>
+    <view class="infobar">
+      <image class="infoicon" src="../../assets/img/profile/vip.svg"></image>
+      <text class="infotext last">我的积分</text>
+    </view>
+  </view>
+  <view class="foot">
+    <view class="infobar">
+      <image class="infoicon" src="../../assets/img/profile/cart.svg"></image>
+      <text class="infotext">我的购物车</text>
+    </view>
+    <view class="infobar">
+      <image class="infoicon" src="../../assets/img/profile/shopping.svg"></image>
+      <text class="infotext last">下载购物APP</text>
+    </view>
+  </view>
+</view>
+

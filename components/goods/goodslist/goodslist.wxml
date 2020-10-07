@@ -1,0 +1,10 @@
+<!--components/goods/goodslist/goodslist.wxml-->
+<view class="goodslist">
+  <!-- <view wx:for="{{goods}}" wx:key="index">{{item.cfav}}</view> -->
+  <goodsitem  
+    class="gitem" 
+    wx:for="{{goods}}" 
+    wx:key="index" 
+    goodsitem="{{item}}"
+    ></goodsitem>
+</view>

@@ -1,0 +1,72 @@
+/* pages/profile/profile.wxss */
+.head {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: #ff5777;
+  color: #fff;
+}
+.avatar {
+  height: 160rpx;
+  width: 160rpx;
+  margin: 20rpx;
+}
+.htext {
+  flex: 1;
+}
+.toptext {
+  margin-top: 40rpx;
+}
+.cellphone {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+.arrow {
+  font-size: 40rpx;
+  line-height: 200rpx;
+  padding: 0 40rpx;
+}
+.wallet {
+  display: flex;
+ border-bottom: 20rpx solid #ddd;
+}
+.witem {
+  flex: 1;
+  text-align: center;
+  padding: 40rpx 0;
+  border-right: 1px solid #ddd;
+}
+.witem:nth-child(3) {
+  border: none;
+}
+.detail {
+  color: #ff5777;
+}
+.middlebar {
+  border-bottom: 20rpx solid #ddd;
+}
+.infobar {
+  display: flex;
+}
+.infoicon {
+  height: 60rpx;
+  width: 60rpx;
+  vertical-align: middle;
+  margin-top: 8rpx;
+  margin-left: 8rpx;
+}
+.infotext {
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+  padding: 16rpx 0;
+  margin-left: 16rpx;
+  text-indent: 1em;
+}
+/* 使用last比使用伪元素更便捷，语义也更清晰 */
+.last {
+  border: none; 
+}
+.foot .infobar:nth-child(2) .infotext{
+  border: none;
+}

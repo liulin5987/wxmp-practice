@@ -1,0 +1,19 @@
+<!--pages/home/home.wxml-->
+
+<swiper autoplay="true" indicator-dots="true" circular="true">
+  <swiper-item class="swiperitem" wx:for="{{swiperimg}}" wx:key="index">
+    <image src="{{item.image}}" class="swiper"></image>
+    <view>{{item.image}}</view>
+  </swiper-item>
+</swiper>
+<view class="recommend">
+  <view class="recommenditem" wx:for="{{recommends}}" wx:key="index">
+    <image class="rimg" src="{{item.image}}" mode="aspectFit"></image>
+    <text>{{item.title}}</text>
+  </view>
+</view>
+
+<tabcontrol class="hometabcontrol" titles="{{['流行','新款','精选']}}" bind:tabclick="tabclick"></tabcontrol>
+<goodslist goods="{{currentgoods}}"></goodslist>
+
+<backtop class="{{height < 300 ? 'hide' : ''}}"></backtop>

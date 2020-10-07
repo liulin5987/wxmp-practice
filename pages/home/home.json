@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "tabcontrol":"../../components/tabcontrol/tabcontrol",
+    "goodslist":"../../components/goods/goodslist/goodslist",
+    "backtop":"../../components/backtop/backtop"
+    
+  },
+  "navigationBarTitleText": "首页",
+  "navigationBarBackgroundColor": "#ff5777"
+}
