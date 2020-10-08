@@ -2,7 +2,9 @@
 import {
   getdetail,
   goodstitle,
-  shopinfo 
+  shopinfo,
+  detailinfo,
+  tableinfo
 } from '../../service/detail'
 Page({
 
@@ -14,7 +16,9 @@ Page({
     topimg:[],
     goodstitle:"",
     shopInfo:"",
-    shopsells:"0"
+    shopsells:"0",
+    detailInfo:"",
+    tableInfo:''
   },
 
   /**
@@ -33,16 +37,22 @@ Page({
         goodstitle: new goodstitle(res.data.result.itemInfo,res.data.result.columns),
         //获取商铺信息
         shopInfo: new shopinfo(res.data.result.shopInfo),
-        shopsells:this.data.shopInfo.sells
+        //获取详细信息
+        detailInfo: new detailinfo(res.data.result.detailInfo),
+        //获取表格信息
+        tableInfo: new tableinfo(res.data.result.itemParams)
+      }) 
+      this.setData({
+        shopsells: this.data.shopInfo.sells
       })
-      this.sellfilter()
-      console.log(this.data.shopInfo)
+      this.sellfilter(this.data.shopsells)
+      console.log(this.data.tableInfo)
     })
 
   },
   //销售量过滤器
-  sellfilter(){
-    if(this.data.shopsells > 10000){
+  sellfilter(shopsells){
+    if(shopsells > 10000){
       this.setData({
         shopsells: (shopsells/10000).toFixed(1) + '万'
       })

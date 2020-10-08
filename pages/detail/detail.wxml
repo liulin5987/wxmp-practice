@@ -1,10 +1,11 @@
 <!--pages/detail/detail.wxml-->
-
+<!-- 轮播图 -->
 <swiper class="swiper" autoplay="true" indicator-dots="true" circular="true">
   <swiper-item wx:for="{{topimg}}" wx:key="index">
     <image src="{{item}}" class="topimg" mode="widthFix"></image>
   </swiper-item>
 </swiper>
+<!-- 标题信息栏 -->
 <view class="goodstitle">
   <view class="title">{{goodstitle.title}}</view>
   <view class="price">
@@ -16,6 +17,7 @@
     <text class="columnsitem" wx:for="{{goodstitle.columns}}" wx:key="index">{{item}}</text>
   </view>
 </view>
+<!-- 商店信息栏 -->
 <view class="shopinfo">
   <view class="shophead">
     <image class="logo" src="{{shopInfo.logo}}"></image>
@@ -36,7 +38,96 @@
       <view class="score" wx:for="{{shopInfo.score}}" wx:key="index">
         <text>{{item.name}}:</text>
         <text style="color:{{item.isBetter == true? 'red' : 'green'}}">{{item.score}}</text>
+        <text 
+        class="stext"
+        style="background-color:{{item.isBetter == true? 'red' : 'green'}}">{{item.isBetter == true? '高' : '低'}}</text>
       </view>
     </view>
   </view>
+  <view class="entry">
+    <text class="ebutton">进店逛逛</text>
+  </view>
 </view> 
+<!-- 商品详情 -->
+<view class="detail">
+  <view class="desc">{{detailInfo.desc}}</view>
+  <view class="img">
+    <text>{{detailInfo.imgtext}}</text>
+    <image
+    wx:for="{{detailInfo.img}}" 
+    wx:key="index"
+    src="{{item}}"
+    mode="widthFix"
+    ></image>
+  </view>
+</view>
+<!-- 尺码表 -->
+<view class="tabletitle">
+  {{tableInfo.key}}
+</view>
+<view class="tables">
+  <view 
+  class="table"
+  wx:for="{{tableInfo.table}}"
+  wx:key="index"
+  wx:for-item="table"
+  >
+   <view 
+   class="row"
+   wx:for="{{table}}"
+   wx:key="index"
+   wx:for-item="row"
+   >
+    <view 
+    class="td"
+    wx:for="{{row}}"
+    wx:key="index"
+    wx:for-item="td"
+    >
+      {{td}}
+    </view>
+   </view>
+  </view>
+</view>
+<!-- 商品详情 -->
+<view class="goodsdetail">
+  <view 
+  class="setrow"
+  wx:for="{{tableInfo.set}}"
+  wx:for-item="setrow"
+  wx:key="index"
+  >
+    <view 
+    class="settd"
+    wx:for="{{setrow}}"
+    wx:for-item="settd"
+    wx:key="index"
+    >
+      {{settd}}
+    </view>
+  </view>
+</view>
+<view class="dis">
+  {{tableInfo.dis}}
+</view>
+<!-- 购物栏 -->
+<view class="shopbar">
+  <view class="shopitem">
+    <view class="cicon"></view>
+    <view class="text">客服</view>
+  </view>
+  <view class="shopitem">
+    <view class="cicon"></view>
+    <view class="text">店铺</view>
+  </view>
+  <view class="shopitem">
+    <view class="cicon"></view>
+    <view class="text">收藏</view>
+  </view>
+  <view class="shopitem addcart">
+    加入购物车
+  </view>
+  <view class="shopitem buy">
+    购买
+  </view>
+</view>

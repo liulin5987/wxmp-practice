@@ -30,3 +30,20 @@ export class shopinfo{
     this.score = shopInfo.score
   }
 }
+
+export class detailinfo{
+  constructor(detailInfo){
+    this.desc = detailInfo.desc,
+    this.imgtext = detailInfo.detailImage[0].key,
+    this.img = detailInfo.detailImage[0].list
+  }
+}
+
+export class tableinfo{
+  constructor(itemparams){
+    this.key = itemparams.info.key,
+    this.set = itemparams.info.set,
+    this.dis = itemparams.rule.disclaimer,
+    this.table = itemparams.rule.tables
+  }
+}
